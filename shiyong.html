@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        /*导航栏*/
+        .nav{
+            height: 50px;
+            border-bottom: 1px solid #cecfcf;
+            background-color: #fff;
+        }
+        .navbar{
+            border: 0;
+        }
+        .nav-logo{
+            height: 50px;
+        }
+        .banner-one{
+            width: 100%;
+            height: 300px;
+            background: url("img/original.jpg") no-repeat center center;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner-one-text{
+            width: 300px;
+            height: 250px;
+            position: absolute;
+            top: -300px;
+            right: -50px;
+        }
+        .banner-one-text>h2,
+        .banner-one-text>p{
+            color: #fff;
+            margin: 20px 0;
+            float: right;
+        }
+        .banner-one-text>p>span{
+            padding: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,.3);
+        }
+        .banner-one-text>button{
+            width: 240px;
+            height: 48px;
+            float: right;
+            font-size: 24px;
+        }
+        /*导航栏结束*/
+
+        /*试用流程*/
+        .shiyong{
+            background-color: #f0f0f0;
+        }
+        .shiyong-h3{
+            padding-left: 10px;
+            width: 80px;
+            height: 64px;
+            margin-top: 20px;
+            border-left: 6px solid #fe5341;
+        }
+        .shiyong-h3>h3{
+            margin-top: 6px;
+        }
+        .shiyong-div img{
+            margin-top: 20px;
+        }
+        .shiyong-div p{
+            padding: 10px 0 5px 0;
+        }
+        .red-bottom{
+            border-bottom: 2px solid #fe5341;
+        }
+
+        /*内容*/
+        .red-weight{
+            font-weight: 600;
+            color: rgb(255, 0, 0);
+        }
+        .blue-weight{
+            color: rgb(0, 112, 192);
+            font-weight: bold;
+        }
+        .blue{
+            color: rgb(0, 112, 192);
+        }
+        .baogao-left>h4,.baogao-left>h3{
+            margin: 30px 0;
+        }
+        .baogao-left>p{
+
+        }
+        .text-weight{
+            font-weight: bold;
+        }
+
+        /*底部样式*/
+        .footer{
+            background-color: #505050;
+            color: #a3a3a3;
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+        .footer a{
+            color: #a3a3a3;
+            font-size: 12px;
+        }
+        .footer>div>p{
+            margin-top: 80px;
+        }
+        .dianwo{
+            margin: 20px 0 50px 0;
+        }
+        .dianwo>span{
+            background: url(img/more.png) no-repeat left center;
+            padding-left: 20px;
+            font-size: 16px;
+            color: #fe5341;
+            cursor: pointer;
+        }
+        .footer h4{
+            color: #fff;
+        }
+
+        /*热门试用*/
+        .content-scroll>div>div{
+            width: 240px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .content-scroll>div>div>div{
+            padding: 0 10px;
+        }
+        .content-scroll img,.baogao img{
+            width: 100%;
+            border-radius: 5px 5px 0 0 ;
+        }
+        .text-weight-six{
+            font-weight: 600;
+        }
+        .text-weight-five{
+            font-weight: 500;
+        }
+        .content-scroll-red>span{
+            padding: 5px 10px;
+            border: 1px solid #fe5341;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fe5341;
+            margin:  0 5px;
+        }
+        .content-scroll-gree>span{
+            padding: 5px 10px;
+            border: 1px solid #80c269;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #80c269;
+            margin:  0 5px;
+        }
+        .red{
+            color: #fe5341;
+        }
+        .shoufa{
+            padding: 5px 10px;
+            background-color: #fe5341;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 0 10px 0 10px;
+            position: absolute;
+            right: 30px;
+            top: 0;
+        }
+        .zhuanxiang{
+            padding: 5px 10px;
+            background-color: #fbf4cb;
+            color: #c4a96a;
+            font-size: 12px;
+            border-radius: 0 10px 0 10px;
+            position: absolute;
+            right: 30px;
+            top: 0;
+        }
+        .gree{
+            color: #80c269;
+        }
+        .lunbo{
+            width: 100%;
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+        }
+        .content-scroll{
+            width: 100%;
+            position: absolute;
+        }
+
+        /*侧边栏*/
+        .sidebar{
+            width: 270px;
+        }
+        .baogao h3{
+            border-left: 6px solid #fe5431;
+            padding: 0 20px;
+        }
+        .sidebar>img{
+            width: 270px;
+            margin: 10px 0;
+            border-radius: 0;
+        }
+        .sidebar>div{
+            width: 270px;
+        }
+        .sidebar>div>h4{
+            font-weight: 600;
+        }
+        .sidebar>div>p{
+            color: #a3a3a3;
+        }
+        .sidebar>button{
+            background-color: #fe5341;
+            height: 48px;
+            width: 270px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .ccc{
+            color: #a3a3a3;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--导航栏-->
+<div class="container-fluid nav">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid nav">
+                <div class="navbar-header">
+                    <img src="img/logonew.png" alt="" class="nav-logo">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="酷玩/酷玩-最新.html">酷玩</a></li>
+                        <li><a href="导购/导购-最新.html">导购</a></li>
+                        <li><a href="大众使用/大众使用-全部.html">试用</a></li>
+                        <li><a href="报告/报告-最新.html">报告</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="">登录</a></li>
+                        <li><a href="">|</a></li>
+                        <li><a href="zhuche.html">注册</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!--焦点图-->
+<div class="banner-one">
+    <div class="banner-one-text">
+        <h2>幻响小贝HiFi2.1音箱</h2>
+        <p>
+            <span>126人申请</span>
+            <span>￥599</span>
+            <span>20台</span>
+        </p>
+        <p class="h4" id="daoji">申请时间剩余：13天5小时37分钟</p>
+        <button class="btn btn-danger" type="submit">立即申请</button>
+    </div>
+
+</div>
+
+<!--试用流程-->
+<div class="container-fluid shiyong">
+    <div class="container">
+        <div class="row shiyong-div">
+            <div class="col-md-2 shiyong-h3"><h3>试用流程</h3></div>
+            <div class="col-md-2 text-center">
+                <img src="img/use1.png" alt="">
+                <p class="red-bottom">开放申请</p>
+            </div>
+            <div class="col-md-2 text-center">
+                 <img src="img/use2.png" alt="">
+                <p>名单公布</p>
+            </div>
+            <div class="col-md-2 text-center">
+                 <img src="img/use3.png" alt="">
+                <p>产品试用</p>
+            </div>
+            <div class="col-md-2 text-center">
+                 <img src="img/use4.png" alt="">
+                <p>提交反馈</p>
+            </div>
+            <div class="col-md-2 text-center">
+                 <img src="img/use5.png" alt="">
+                <p>活动结束</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--内容报告-->
+<div class="container-fluid baogao">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 content baogao-left">
+                <h3>产品介绍</h3>
+                <h4 class="red-weight">多重功能集成的便携控制中心：半果控制中心。</h4>
+                <p>半果控制中心是一台功能高度集成的便携控制设备，包含WiFi收发模块、蓝牙4.1模块、独立声卡系统、音乐控制拨盘、麦克风语音接收、3.5mm耳机接口、高速数据传输、QC2.0快速充电、Type-C接口等。仅需将其与电脑连接，即可解决科技生活中遇到的种种痛点。</p>
+                <img src="img/use1.jpg" alt="">
+                <h4 class="blue-weight">结构设计</h4>
+                <p>极致一体化，机身表面没有一丝接缝和一颗螺丝。采用突破性的液态金属质感工艺，无任何键位开关，所有功能同时自然高效运行。</p>
+                <h4 class="blue-weight">无线网络</h4>
+                <p>台式机或无自带网卡的电脑只需插入半果控制中心，切换至网卡模式即可接受WiFi信号。还可创建WiFi热点，让你的手机和平板立刻联网。</p>
+                <img src="img/use.jpg" alt="">
+                <h4 class="blue-weight">蓝牙连接</h4>
+                <p>先进的超低功耗蓝牙4.1，设备配对连接更便捷。可将所有设备连接至一台控制中心，数据传输速率大幅提高。</p>
+                <h4 class="blue-weight">独立声卡</h4>
+                <p>配备德州仪器HiFi芯片，内置Max Bass技术，带来更高解析力音质。并且采用独立耳机放大器，内置麦克风，任何软件都可轻松调用。</p>
+                <h4 class="blue-weight">极速充电</h4>
+                <p>支持QC 2.0快充协议，使用一根Type-C线，4个USB可同时极速快充，并且每个接口都拥有芯片级的4重保护，告别插线板和充电器。</p>
+                <h3>活动介绍</h3>
+                <p>点击申请按钮报名，报名成功后记得邀请好友一起来参与哦~邀请好友数前十名将根据申请理由和影响力抽取一位直接获得试用机会。请认真填写申请理由，展现有创意的试用计划。进入手机端完善个人主页信息，可以大大提高申请通过几率哦~</p>
+                <p class="blue">试用报告要求100% 原创，抄袭会被封杀哦！</p>
+                <h4 class="red-weight">活动流程</h4>
+                <ul class="list-unstyled">
+                    <li><p><span class="text-weight">1.名单公布</span>：试用名单将在活动页公布</p></li>
+                    <li><p><span class="text-weight">2.试用通知</span>：名单公布后客服将以短信的方式通知申请成功者，2天不回复算弃权</p></li>
+                    <li><p><span class="text-weight">3.押金收取</span>：客服将统一通知大家收取产品押金</p></li>
+                    <li><p><span class="text-weight">4.产品寄送</span>：收到押金后第一时间将产品快递给大家</p></li>
+                    <li><p><span class="text-weight">5.网络晒单</span>：收货后请在微博或朋友圈等社交网络晒单</p></li>
+                    <li><p><span class="text-weight">6.试用报告</span>：收到货的10天内完成报告并上传</p></li>
+                    <li><p><span class="text-weight">7.产品回收</span>：选取6篇优秀报告，赠送产品</p></li>
+                    <li><p><span class="text-weight">8.押金退回</span>：活动结束返还，人为损坏须赔偿</p></li>
+                </ul>
+                <h4 class="red-weight">活动时间</h4>
+                <ul class="list-unstyled">
+                    <li><p><span class="text-weight">1.申请报名</span>：2016/02/02－2016/02/17（截至24点）</p></li>
+                    <li><p><span class="text-weight">2.公布名单</span>：2016/02/20</p></li>
+                    <li><p><span class="text-weight">3.发货日期</span>：2016/02/22（以实际为准）</p></li>
+                    <li><p><span class="text-weight">4.试用期限</span>：收到产品后10天内</p></li>
+                </ul>
+                <div>
+                    <h3>热门试用</h3>
+                    <div class="container">
+                        <div class="lunbo"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 sidebar">
+                <h3>购买渠道</h3>
+                <p class="h1 red">￥ 499</p>
+                <button type="button" class="btn-block btn-danger h4">点击购买</button>
+                <p class="text-center ccc">来自官网</p>
+                <h3>极果体验师</h3>
+                <img src="img/tiyanImg.jpg" alt="">
+                <div>
+                    <h4>福利</h4>
+                    <p>第一时间体验新品，大众试用优先通过，还有定向邀请试用，新品玩到手软！</p>
+                    <h4>要求</h4>
+                    <p>是某个领域的大神级玩家，在社交网络或圈子里有大影响力，善写作会拍摄。</p>
+                    <h4>申请</h4>
+                    <p>1. 关注极果公众号：jguojguo
+                        （或扫描下方二维码）</p>
+                    <p>2. 在公众号内回复：体验师</p>
+                    <h3>关注我们</h3>
+                    <img src="img/myCode.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部-->
+<div class="container-fluid footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="img/code.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="img/logoImg.jpg" alt="">
+                <p>全球酷玩试用导购平台</p>
+                <p>酷·新奇·好玩·品质</p>
+                <p>微信添加“JguoJguo” </p>
+                <p>获取我们的服务。</p>
+            </div>
+            <div class="col-md-2">
+                <h4>免费试用</h4>
+                <p><a href="#">试用流程</a></p>
+                <p> <a href="#">如何提高成功率</a></p>
+            </div>
+            <div class="col-md-2">
+                <h4>友情链接</h4>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">智东西</a></div>
+                    <div class="col-md-6"><a href="#">WEIBUSI</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">搜狐IT</a></div>
+                    <div class="col-md-6"><a href="#">腾讯科技</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">搜狐数码</a></div>
+                    <div class="col-md-6"><a href="#">凤凰科技</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">泡泡网</a></div>
+                    <div class="col-md-6"><a href="#">3W咖啡</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">ZUK社区</a></div>
+                    <div class="col-md-6"><a href="#">亿觅emie</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">极客公园</a></div>
+                    <div class="col-md-6"><a href="#">易迅易启玩</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">果库</a></div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <h4>购买攻略</h4>
+                <p><a href="#">美亚海淘教程</a></p>
+                <p><a href="#">日亚海淘教程</a></p>
+                <p><a href="#">海淘转运攻略</a></p>
+                <p><a href="#">kickstarter 众筹购买攻略</a></p>
+                <p><a href="#">indiegogo 众筹购买攻略</a></p>
+            </div>
+            <div class="col-md-2">
+                <h4>厂商合作</h4>
+                <p><a href="guayu.html">关于极果</a></p>
+                <p><a href="#">联系我们</a></p>
+                <p><a href="#">商务合作：BD@jiguo.com</a></p>
+                <p><a href="#">CEO邮箱：CEO@jiguo.com</a></p>
+            </div>
+        </div>
+        <p class="text-center">© 2016 极果版权所有</p>
+    </div>
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+
+    var str = '';
+    $(function () {
+        var $lunboData = [{
+            name: '巴慕达 The Toaster 烤面包机',
+            numberOneClass:'content-scroll-red',
+            numberOne: '2032',
+            numberTwo:'20台',
+            shenQingNumber:'1392',
+            leiXing:'首发',
+            leiXingClass:'shoufa',
+            text: '剩余时间2天',
+            textClass: 'red',
+            img:'img/hot1.jpg'
+        },{
+            name: 'Osprey小鹰户外运动专业腰包',
+            numberOneClass:'content-scroll-gree',
+            numberOne: '2032',
+            numberTwo:'20台',
+            shenQingNumber:'1392',
+            leiXing:'体验师专享',
+            leiXingClass:'zhuanxiang',
+            text: '查看试用名单',
+            textClass: 'gree',
+            img:'img/hot2.jpg'
+        },
+            {
+                name: 'Liquid Image 338 运动摄像眼镜',
+                numberOneClass:'content-scroll-red',
+                numberOne: '2032',
+                numberTwo:'20台',
+                shenQingNumber:'1392',
+                leiXing:'首发',
+                leiXingClass:'shoufa',
+                text: '剩余时间2天',
+                textClass: 'red',
+                img:'img/hot3.jpg'
+
+            },{
+                name: '巴慕达 The Toaster 烤面包机',
+                numberOneClass:'content-scroll-red',
+                numberOne: '2032',
+                numberTwo:'20台',
+                shenQingNumber:'1392',
+                leiXing:'首发',
+                leiXingClass:'shoufa',
+                text: '剩余时间2天',
+                textClass: 'red',
+                img:'img/hot4.jpg'
+
+            },
+            {
+                name: '巴慕达 The Toaster 烤面包机',
+                numberOneClass:'content-scroll-red',
+                numberOne: '2032',
+                numberTwo:'20台',
+                shenQingNumber:'1392',
+                leiXing:'首发',
+                leiXingClass:'shoufa',
+                text: '剩余时间2天',
+                textClass: 'red',
+                img:'img/hot5.jpg'
+
+            },{
+                name: 'Osprey小鹰户外运动专业腰包',
+                numberOneClass:'content-scroll-gree',
+                numberOne: '2032',
+                numberTwo:'20台',
+                shenQingNumber:'1392',
+                leiXing:'体验师专享',
+                leiXingClass:'zhuanxiang',
+                text: '查看试用名单',
+                textClass: 'gree',
+                img:'img/hot6.jpg'
+
+            },
+            {
+                name: 'Liquid Image 338 运动摄像眼镜',
+                numberOneClass:'content-scroll-red',
+                numberOne: '2032',
+                numberTwo:'20台',
+                shenQingNumber:'1392',
+                leiXing:'首发',
+                leiXingClass:'shoufa',
+                text: '剩余时间2天',
+                textClass: 'red',
+                img:'img/hot7.jpg'
+
+            },{
+                name: '巴慕达 The Toaster 烤面包机',
+                numberOneClass:'content-scroll-red',
+                numberOne: '2032',
+                numberTwo:'20台',
+                shenQingNumber:'1392',
+                leiXing:'首发',
+                leiXingClass:'shoufa',
+                text: '剩余时间2天',
+                textClass: 'red',
+                img:'img/hot8.jpg'
+
+            },
+            {
+                name: '巴慕达 The Toaster 烤面包机',
+                numberOneClass:'content-scroll-red',
+                numberOne: '2032',
+                numberTwo:'20台',
+                shenQingNumber:'1392',
+                leiXing:'首发',
+                leiXingClass:'shoufa',
+                text: '剩余时间2天',
+                textClass: 'red',
+                img:'img/hot9.jpg'
+
+            },{
+                name: 'Osprey小鹰户外运动专业腰包',
+                numberOneClass:'content-scroll-gree',
+                numberOne: '2032',
+                numberTwo:'20台',
+                shenQingNumber:'1392',
+                leiXing:'体验师专享',
+                leiXingClass:'zhuanxiang',
+                text: '查看试用名单',
+                textClass: 'gree',
+                img:'img/hot10.jpg'
+
+            },
+            {
+                name: 'Liquid Image 338 运动摄像眼镜',
+                numberOneClass:'content-scroll-red',
+                numberOne: '2032',
+                numberTwo:'20台',
+                shenQingNumber:'1392',
+                leiXing:'首发',
+                leiXingClass:'shoufa',
+                text: '剩余时间2天',
+                textClass: 'red',
+                img:'img/hot11.jpg'
+
+            },{
+                name: '巴慕达 The Toaster 烤面包机',
+                numberOneClass:'content-scroll-red',
+                numberOne: '2032',
+                numberTwo:'20台',
+                shenQingNumber:'1392',
+                leiXing:'首发',
+                leiXingClass:'shoufa',
+                text: '剩余时间2天',
+                textClass: 'red',
+                img:'img/hot12.jpg'
+            }];
+
+
+        for(var j = 0; j < 1; j++){
+            str += '<div class="row content-scroll text-center">';
+            for(var i = 0; i < 4; i++){
+                str += '<div class="col-md-3 col-sm-3 col-xs-3">';
+                str += '<div>';
+                str += '<img src="'+ $lunboData[i].img +'" alt="..." >';
+                str += '<div>';
+                str += '<h4 class="text-weight-six">'+ $lunboData[i].name +'</h4>';
+                str += '<p class="'+ $lunboData[i].numberOneClass +'">';
+                str += '<span class="">2032</span>';
+                str += '<span class="">20台</span>';
+                str += '</p>';
+                str += '<h4><span class="'+ $lunboData[i].textClass +' text-weight-five">1392</span>申请</h4>';
+                str += '<a href="#" class="'+ $lunboData[i].textClass +'">'+ $lunboData[i].text +'</a>';
+                str += '</div>';
+                str += '</div>';
+                str += '<span class="'+ $lunboData[i].leiXingClass +'">'+ $lunboData[i].leiXing +'</span>';
+                str += '</div>';
+            }
+            str += '</div>';
+        }
+        $('.lunbo').html(str);
+    });
+
+    $('.banner-one-text').stop().animate({top:20,right: 300},800)
+
+    // 倒计时
+    $(function () {
+        var shengri = 1532534400000;
+        function jia(a) {
+            return a = a < 10? '0'+a:a
+        }
+        var a = document.getElementById('daoji');
+        setInterval(function () {
+            var date = new Date;
+            var daojisi = shengri - date.getTime();
+            var tian = parseInt(daojisi/1000/60/60/24 );
+            var xiaosi = parseInt(daojisi/1000/60/60%24);
+            var fen = parseInt(daojisi/1000/60%60);
+            var miao = parseInt(daojisi/1000%60);
+            a.innerHTML = ('<h4 >距离申名扬生日还有&nbsp&nbsp:&nbsp&nbsp'+tian+'天'+jia(xiaosi)+':'+jia(fen)+':'+jia(miao)+'</h4>');
+        })
+    });
+
+
+</script>
+</html>

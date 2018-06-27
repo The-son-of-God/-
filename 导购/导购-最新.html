@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /*导航栏*/
+        .nav{
+            height: 50px;
+            border-bottom: 1px solid #cecfcf;
+            background-color: #fff;
+        }
+        .navbar{
+            border: 0;
+        }
+        .nav-logo{
+            height: 50px;
+        }
+        .banner-one{
+            width: 100%;
+            height: 300px;
+            background: url("../img/original.jpg") no-repeat center center;
+            position: relative;
+        }
+        .banner-one-text{
+            width: 300px;
+            height: 250px;
+            position: absolute;
+            top: 20px;
+            right: 300px;
+        }
+        .banner-one-text>h2,
+        .banner-one-text>p{
+            color: #fff;
+            margin: 20px 0;
+            float: right;
+        }
+        .banner-one-text>p>span{
+            padding: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,.3);
+        }
+        .banner-one-text>button{
+            width: 240px;
+            height: 48px;
+            float: right;
+            font-size: 24px;
+        }
+        #color-red{
+            color: #fe5341;
+        }
+        /*导航栏结束*/
+        .container-fluid>h1{
+            margin: 50px 0;
+        }
+
+        .content-scroll > div > div {
+            width: 240px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .content-scroll > div > div > div {
+            padding: 0 10px;
+        }
+
+        .content-scroll img, .baogao img {
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .text-weight-six {
+            font-weight: 600;
+        }
+
+        .text-weight-five {
+            font-weight: 500;
+        }
+
+        .content-scroll-red > span {
+            padding: 5px 10px;
+            border: 1px solid #fe5341;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fe5341;
+            margin: 0 5px;
+        }
+
+        .content-scroll-gree > span {
+            padding: 5px 10px;
+            border: 1px solid #80c269;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #80c269;
+            margin: 0 5px;
+        }
+
+
+        .baogao > div > div > div {
+            width: 220px;
+            padding: 0;
+            border-radius: 5px;
+        }
+
+        .baogao-right > span:first-of-type, .baogao-right > span:last-of-type {
+            display: inline-block;
+            width: 21px;
+            height: 22px;
+            padding-left: 15px;
+            color: #a3a3a3;
+            line-height: 22px;
+            float: right;
+            margin: 20px 10px 10px 0;
+        }
+
+        .baogao-right > span:first-of-type {
+            background: url("../img/reply.png") no-repeat left center;
+        }
+
+        .baogao-right > span:last-of-type {
+            background: url("../img/xin.png") no-repeat left center;
+        }
+
+        .baogao > div > div > div > div:first-of-type {
+            padding: 0 10px;
+        }
+
+        .baogao-bottom-img {
+            width: 100%;
+            height: 15px;
+            background: url("../img/listbg.jpg") no-repeat center center;
+            margin-top: -5px;
+            margin-left: 25px;
+        }
+
+        .baogao-left {
+            color: #a3a3a3;
+            float: left;
+            padding-left: 15px;
+            margin: 20px 10px 10px 0;
+        }
+
+        .baogao > div {
+            margin-bottom: 40px;
+        }
+
+        .bg-cc {
+            width: 100%;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container-fluid{
+            padding: 0;
+        }
+
+        .baogao p {
+            color: #a3a3a3;
+        }
+
+        .kuwanhe>h1,
+        .kuwanhe>div:first-of-type{
+            background-color: #fff;
+        }
+        /*底部样式*/
+        .footer {
+            background-color: #505050;
+            color: #a3a3a3;
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+
+        .footer a {
+            color: #a3a3a3;
+            font-size: 12px;
+        }
+
+        .footer > div > p {
+            margin-top: 80px;
+        }
+
+        .dianwo {
+            margin: 20px 0 50px 0;
+        }
+
+        .dianwo > span {
+            background: url(../img/more.png) no-repeat left center;
+            padding-left: 20px;
+            font-size: 16px;
+            color: #fe5341;
+            cursor: pointer;
+        }
+
+        .bg-cc>.baogao{
+            padding: 30px 0;
+        }
+        .footer h4{
+            color: #fff;
+        }
+        /*发现酷玩*/
+        .nav {
+            background-color: #fff;
+        }
+
+        .text-center > a {
+            margin-bottom: 0;
+            display: inline-block;
+            width: 165px;
+            height: 30px;
+        }
+
+        .nav-a-red {
+            border-bottom: 4px solid #fe5431;
+            color: #fe5431;
+        }
+    </style>
+</head>
+<body>
+
+<!--导航栏-->
+<div class="container-fluid nav">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid nav">
+                <div class="navbar-header">
+                    <img src="../img/logonew.png" alt="" class="nav-logo">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html">首页</a></li>
+                        <li><a href="../酷玩/酷玩-最新.html">酷玩</a></li>
+                        <li><a href="导购-最新.html" id="color-red">导购</a></li>
+                        <li><a href="../大众使用/大众使用-全部.html">试用</a></li>
+                        <li><a href="../报告/报告-最新.html">报告</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="">登录</a></li>
+                        <li><a href="">|</a></li>
+                        <li><a href="../zhuche.html">注册</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!--发现酷玩-->
+<div class="container-fluid kuwanhe text-center">
+    <h1>导购清单</h1>
+    <div class="text-center">
+        <a href="导购-最新.html" class="h4 nav-a-red">最新</a>
+        <a href="导购-最热.html" class="h4">最热</a>
+    </div>
+    <div class="container-fluid bg-cc">
+        <div class="container bg-cc">
+            <div class="baogao container kuwan">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k4.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k4.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k4.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k4.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k4.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k4.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k4.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k4.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/kuwan01.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/kuwan01.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/kuwan01.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/kuwan01.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/kuwan01.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/kuwan01.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/kuwan01.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/kuwan01.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                </div>
+                <!--1-->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k2.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k2.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k2.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k2.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k2.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k2.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k2.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k2.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                </div>
+                <!--2-->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k3.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k3.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k3.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k3.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k3.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k3.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k3.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k3.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                </div>
+                <!--3-->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/re1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/re1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/re1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/re1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/re1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/re1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/re1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/re1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                </div>
+                <!--4-->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img src="../img/k1.jpg" alt="...">
+                            <div>
+                                <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                            </div>
+                            <div class="baogao-right">
+                                <span>3</span>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="baogao-bottom-img"></div>
+                    </div>
+                </div>
+            </div>
+            <!--点我-->
+            <div class="dianwo text-center"><span>点击加载更多</span></div>
+        </div>
+    </div>
+
+
+</div>
+
+<!--底部-->
+<div class="container-fluid footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="../img/code.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="../img/logoImg.jpg" alt="">
+                <p>全球酷玩试用导购平台</p>
+                <p>酷·新奇·好玩·品质</p>
+                <p>微信添加“JguoJguo” </p>
+                <p>获取我们的服务。</p>
+            </div>
+            <div class="col-md-2">
+                <h4>免费试用</h4>
+                <p><a href="#">试用流程</a></p>
+                <p><a href="#">如何提高成功率</a></p>
+            </div>
+            <div class="col-md-2">
+                <h4>友情链接</h4>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">智东西</a></div>
+                    <div class="col-md-6"><a href="#">WEIBUSI</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">搜狐IT</a></div>
+                    <div class="col-md-6"><a href="#">腾讯科技</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">搜狐数码</a></div>
+                    <div class="col-md-6"><a href="#">凤凰科技</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">泡泡网</a></div>
+                    <div class="col-md-6"><a href="#">3W咖啡</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">ZUK社区</a></div>
+                    <div class="col-md-6"><a href="#">亿觅emie</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">极客公园</a></div>
+                    <div class="col-md-6"><a href="#">易迅易启玩</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">果库</a></div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <h4>购买攻略</h4>
+                <p><a href="#">美亚海淘教程</a></p>
+                <p><a href="#">日亚海淘教程</a></p>
+                <p><a href="#">海淘转运攻略</a></p>
+                <p><a href="#">kickstarter 众筹购买攻略</a></p>
+                <p><a href="#">indiegogo 众筹购买攻略</a></p>
+            </div>
+            <div class="col-md-2">
+                <h4>厂商合作</h4>
+                <p><a href="../guayu.html">关于极果</a></p>
+                <p><a href="#">联系我们</a></p>
+                <p><a href="#">商务合作：BD@jiguo.com</a></p>
+                <p><a href="#">CEO邮箱：CEO@jiguo.com</a></p>
+            </div>
+        </div>
+        <p class="text-center">© 2016 极果版权所有</p>
+    </div>
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+
+
+    // 点我事件
+    $(function () {
+        var $index1 = 0;
+        var $kuwanDiv = $('.kuwan>div');
+        var $dianwoSpan = $('.dianwo>span');
+        $kuwanDiv.eq(3).nextAll().hide();
+        $dianwoSpan.click(function () {
+            $index1++;
+            $kuwanDiv.eq($index1 * 2 + 3).prevAll().show();
+            $kuwanDiv.eq($index1 * 2 + 3).show();
+            if ($index1 === 4) {
+                $dianwoSpan.html('没有更多啦~')
+            }
+        })
+    })
+
+</script>
+</html>

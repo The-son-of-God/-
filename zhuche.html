@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /*导航栏*/
+        .nav{
+            height: 50px;
+            background-color: #e7e7e7;
+            border-bottom: 1px solid #cecfcf;
+            box-shadow: 0 0 5px #cecfcf63 inset;
+        }
+        .navbar{
+            border: 0;
+        }
+        .nav-logo{
+            height: 50px;
+        }
+        .banner-one{
+            width: 100%;
+            height: 300px;
+            background: url("img/original.jpg") no-repeat center center;
+            position: relative;
+        }
+        .banner-one-text{
+            width: 300px;
+            height: 250px;
+            position: absolute;
+            top: 20px;
+            right: 300px;
+        }
+        .banner-one-text>h2,
+        .banner-one-text>p{
+            color: #fff;
+            margin: 20px 0;
+            float: right;
+        }
+        .banner-one-text>p>span{
+            padding: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,.3);
+        }
+        .banner-one-text>button{
+            width: 240px;
+            height: 48px;
+            float: right;
+            font-size: 24px;
+        }
+        /*导航栏结束*/
+        /*注册*/
+        .bg-cc{
+            background-color: #f7f7f7;
+            padding: 30px 0;
+        }
+        .zhuche{
+            border-radius: 10px;
+            background-color: #fff;
+            border: 1px #d7d7d7 solid;
+            padding-bottom: 50px;
+        }
+        .zhuche-text{
+            width: 400px;
+            margin: 50px auto;
+        }
+        .zhuche-text input,.zhuche-text>form>div span{
+            height: 50px;
+            font-size: 16px;
+            color: #484848;
+            border-radius: 10px;
+        }
+        .zhuche-text input{
+            background-color: #f7f7f7;
+        }
+        .zhuche-text>form>div>span{
+            height: 50px;
+            font-size: 16px;
+            border-radius: 10px;
+            line-height: 35px;
+            color: #a3a3a3;
+        }
+        .zhuche-text>form>div img{
+            float: right;
+            margin-top: -66px;
+            width: 35%;
+            cursor: pointer;
+        }
+        .zhuche-text>form>div span{
+            margin-top: -66px;
+            float: right;
+            width: 35%;
+            border-radius: 10px;
+        }
+        .yanzhengma{
+            width: 60%;
+        }
+        /*注册结束*/
+        /*底部样式*/
+        .footer{
+            background-color: #505050;
+            color: #a3a3a3;
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+        .footer a{
+            color: #a3a3a3;
+            font-size: 12px;
+        }
+        .footer>div>p{
+            margin-top: 80px;
+        }
+        .dianwo{
+            margin: 20px 0 50px 0;
+        }
+        .dianwo>span{
+            background: url(img/more.png) no-repeat left center;
+            padding-left: 20px;
+            font-size: 16px;
+            color: #fe5341;
+            cursor: pointer;
+        }
+        .footer h4{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<!--导航栏-->
+<div class="container-fluid nav">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid nav">
+                <div class="navbar-header">
+                    <img src="img/logonew.png" alt="" class="nav-logo">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="酷玩/酷玩-最新.html">酷玩</a></li>
+                        <li><a href="导购/导购-最新.html">导购</a></li>
+                        <li><a href="大众使用/大众使用-全部.html">试用</a></li>
+                        <li><a href="报告/报告-最新.html">报告</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="">登录</a></li>
+                        <li><a href="">|</a></li>
+                        <li><a href="zhuche.html">注册</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div class="container-fluid bg-cc">
+    <div class="container zhuche">
+        <h3>注册极果</h3>
+        <div class="zhuche-text">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入登录手机号">
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <input type="text" class="form-control yanzhengma" placeholder="请输入图片校验码">
+                    </div>
+                    <img src="img/imgCode.jpg" alt="">
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <input type="text" class="form-control yanzhengma" placeholder="请输入4位数字验证码">
+                    </div>
+                    <span type="submit" class="btn btn-default" id="huoqu">获取验证码</span>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入用户名">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="请输入新密码">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="确定新密码">
+                </div>
+                <button type="submit" class="btn btn-danger btn-block">立即注册</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--底部-->
+<div class="container-fluid footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="img/code.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="img/logoImg.jpg" alt="">
+                <p>全球酷玩试用导购平台</p>
+                <p>酷·新奇·好玩·品质</p>
+                <p>微信添加“JguoJguo” </p>
+                <p>获取我们的服务。</p>
+            </div>
+            <div class="col-md-2">
+                <h4>免费试用</h4>
+                <p><a href="#">试用流程</a></p>
+                <p> <a href="#">如何提高成功率</a></p>
+            </div>
+            <div class="col-md-2">
+                <h4>友情链接</h4>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">智东西</a></div>
+                    <div class="col-md-6"><a href="#">WEIBUSI</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">搜狐IT</a></div>
+                    <div class="col-md-6"><a href="#">腾讯科技</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">搜狐数码</a></div>
+                    <div class="col-md-6"><a href="#">凤凰科技</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">泡泡网</a></div>
+                    <div class="col-md-6"><a href="#">3W咖啡</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">ZUK社区</a></div>
+                    <div class="col-md-6"><a href="#">亿觅emie</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">极客公园</a></div>
+                    <div class="col-md-6"><a href="#">易迅易启玩</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">果库</a></div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <h4>购买攻略</h4>
+                <p><a href="#">美亚海淘教程</a></p>
+                <p><a href="#">日亚海淘教程</a></p>
+                <p><a href="#">海淘转运攻略</a></p>
+                <p><a href="#">kickstarter 众筹购买攻略</a></p>
+                <p><a href="#">indiegogo 众筹购买攻略</a></p>
+            </div>
+            <div class="col-md-2">
+                <h4>厂商合作</h4>
+                <p><a href="guayu.html">关于极果</a></p>
+                <p><a href="#">联系我们</a></p>
+                <p><a href="#">商务合作：BD@jiguo.com</a></p>
+                <p><a href="#">CEO邮箱：CEO@jiguo.com</a></p>
+            </div>
+        </div>
+        <p class="text-center">© 2016 极果版权所有</p>
+    </div>
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+
+    // 点击获取手机验证码
+    $(function () {
+        var $that = null;
+        $('#huoqu').click(function () {
+            $that = $(this);
+            aa()
+        });
+        function aa() {
+            var $index = 61;
+            var $int = null;
+            $that.attr('disabled', true);
+            clearInterval($int);
+            $index = 3;
+            $int = setInterval(function () {
+                $('#huoqu').unbind('click');
+                $index--;
+                $that.html('' + $index + '秒后重新发送');
+                if ($index === 0) {
+                    clearInterval($int);
+                    $that.attr('disabled', false);
+                    $that.html('获取验证码');
+                    $('#huoqu').click(function () {
+                        aa()
+                    });
+                }
+            }, 1000);
+
+        }
+
+
+
+
+
+    })
+
+</script>
+</html>

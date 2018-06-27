@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /*导航栏*/
+        .nav{
+            height: 50px;
+            border-bottom: 1px solid #cecfcf;
+            background-color: #fff;
+        }
+        .navbar{
+            border: 0;
+        }
+        .nav-logo{
+            height: 50px;
+        }
+        .banner-one{
+            width: 100%;
+            height: 300px;
+            background: url("img/original.jpg") no-repeat center center;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner-one-text{
+            width: 300px;
+            height: 250px;
+            position: absolute;
+            top: -300px;
+            right: -50px;
+        }
+        .banner-one-text>h2,
+        .banner-one-text>p{
+            color: #fff;
+            margin: 20px 0;
+            float: right;
+        }
+        .banner-one-text>p>span{
+            padding: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,.3);
+        }
+        .banner-one-text>button{
+            width: 240px;
+            height: 48px;
+            float: right;
+            font-size: 24px;
+        }
+        #color-red{
+            color: #fe5341;
+        }
+        /*导航栏结束*/
+        .content-scroll>div>div{
+            width: 240px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .content-scroll>div>div>div{
+            padding: 0 10px;
+        }
+        .content-scroll img,.baogao img{
+            width: 100%;
+            border-radius: 5px 5px 0 0 ;
+        }
+        .text-weight-six{
+            font-weight: 600;
+        }
+        .text-weight-five{
+            font-weight: 500;
+        }
+        .content-scroll-red>span{
+            padding: 5px 10px;
+            border: 1px solid #fe5341;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fe5341;
+            margin:  0 5px;
+        }
+        .content-scroll-gree>span{
+            padding: 5px 10px;
+            border: 1px solid #80c269;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #80c269;
+            margin:  0 5px;
+        }
+        .red{
+            color: #fe5341;
+        }
+        .shoufa{
+            padding: 5px 10px;
+            background-color: #fe5341;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 0 10px 0 10px;
+            position: absolute;
+            right: 30px;
+            top: 0;
+        }
+        .zhuanxiang{
+            padding: 5px 10px;
+            background-color: #fbf4cb;
+            color: #c4a96a;
+            font-size: 12px;
+            border-radius: 0 10px 0 10px;
+            position: absolute;
+            right: 30px;
+            top: 0;
+        }
+        .gree{
+            color: #80c269;
+        }
+        .lunbo{
+            width: 100%;
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+        }
+        .content-scroll{
+            width: 100%;
+            position: absolute;
+        }
+        .baogao>div>div>div{
+            width: 220px;
+            padding: 0;
+            border-radius: 5px;
+        }
+        .baogao-right>span:first-of-type,.baogao-right>span:last-of-type{
+            display: inline-block;
+            width: 21px;
+            height: 22px;
+            padding-left: 15px;
+            color: #a3a3a3;
+            line-height: 22px;
+            float: right;
+            margin: 20px 10px 10px 0;
+        }
+        .baogao-right>span:first-of-type{
+            background: url("img/reply.png") no-repeat left center;
+        }
+        .baogao-right>span:last-of-type{
+            background: url("img/xin.png") no-repeat left center;
+        }
+        .baogao>div>div>div>div:first-of-type{
+            padding: 0 10px;
+        }
+        .baogao-bottom-img{
+            width: 100%;
+            height: 15px;
+            background: url("img/listbg.jpg") no-repeat center center;
+            margin-top: -5px;
+        }
+        .baogao-left{
+            color: #a3a3a3;
+            float: left;
+            padding-left: 15px;
+            margin: 20px 10px 10px 0;
+        }
+        .baogao>div{
+            margin-bottom: 40px;
+        }
+        .bg-cc{
+            background-color: #f7f7f7;
+        }
+        .baogao p{
+            color: #a3a3a3;
+        }
+        .kuwan>div>div>div{
+            cursor: pointer;
+        }
+        .kuwan>div>div>a>div{
+            width: 220px;
+            padding: 0;
+        }
+        /*底部样式*/
+        .footer{
+            background-color: #505050;
+            color: #a3a3a3;
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+        .footer a{
+            color: #a3a3a3;
+            font-size: 12px;
+        }
+        .footer>div>p{
+            margin-top: 80px;
+        }
+        .dianwo{
+            margin: 20px 0 50px 0;
+        }
+        .dianwo>span{
+            background: url(img/more.png) no-repeat left center;
+            padding-left: 20px;
+            font-size: 16px;
+            color: #fe5341;
+            cursor: pointer;
+        }
+        .footer h4{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<!--导航栏-->
+<div class="container-fluid nav">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid nav">
+                <div class="navbar-header">
+                    <img src="img/logonew.png" alt="" class="nav-logo">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html" id="color-red">首页</a></li>
+                        <li><a href="酷玩/酷玩-最新.html">酷玩</a></li>
+                        <li><a href="导购/导购-最新.html">导购</a></li>
+                        <li><a href="大众使用/大众使用-全部.html">试用</a></li>
+                        <li><a href="报告/报告-最新.html">报告</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="">登录</a></li>
+                        <li><a href="">|</a></li>
+                        <li><a href="zhuche.html">注册</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!--焦点图-->
+<div class="banner-one">
+    <div class="banner-one-text">
+        <h2>幻响小贝HiFi2.1音箱</h2>
+        <p>
+            <span>126人申请</span>
+            <span>￥599</span>
+            <span>20台</span>
+        </p>
+        <p class="h4" id="daoji">申请时间剩余：13天5小时37分钟</p>
+        <button class="btn btn-danger" type="submit">立即申请</button>
+    </div>
+
+</div>
+<!--内容-->
+<!--轮播图-->
+<div class="container">
+    <div class="lunbo"></div>
+</div>
+<!--报告精选-->
+<div class="bg-cc">
+    <div class="baogao container">
+        <h3>报告精选</h3>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="img-thumbnail">
+                    <img src="img/re2.jpg" alt="...">
+                    <div>
+                        <h5>怎么骑都不会累的智能自行车：云马 C1试骑体验</h5>
+                    </div>
+                    <div class="baogao-left">
+                        <span>● 苏苏</span>
+                    </div>
+                    <div class="baogao-right">
+                        <span>3</span>
+                        <span>3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="img-thumbnail">
+                    <img src="img/re2.jpg" alt="...">
+                    <div>
+                        <h5>怎么骑都不会累的智能自行车：云马 C1试骑体验</h5>
+                    </div>
+                    <div class="baogao-left">
+                        <span>● 苏苏</span>
+                    </div>
+                    <div class="baogao-right">
+                        <span>3</span>
+                        <span>3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="img-thumbnail">
+                    <img src="img/re2.jpg" alt="...">
+                    <div>
+                        <h5>怎么骑都不会累的智能自行车：云马 C1试骑体验</h5>
+                    </div>
+                    <div class="baogao-left">
+                        <span>● 苏苏</span>
+                    </div>
+                    <div class="baogao-right">
+                        <span>3</span>
+                        <span>3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="img-thumbnail">
+                    <img src="img/re2.jpg" alt="...">
+                    <div>
+                        <h5>怎么骑都不会累的智能自行车：云马 C1试骑体验</h5>
+                    </div>
+                    <div class="baogao-left">
+                        <span>● 苏苏</span>
+                    </div>
+                    <div class="baogao-right">
+                        <span>3</span>
+                        <span>3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="img-thumbnail">
+                    <img src="img/re3.jpg" alt="...">
+                    <div>
+                        <h5>声音不是最优秀，但它形音完美的结合，足够打动人心</h5>
+                    </div>
+                    <div class="baogao-left">
+                        <span>● iAra</span>
+                    </div>
+                    <div class="baogao-right">
+                        <span>3</span>
+                        <span>3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="img-thumbnail">
+                    <img src="img/re3.jpg" alt="...">
+                    <div>
+                        <h5>声音不是最优秀，但它形音完美的结合，足够打动人心</h5>
+                    </div>
+                    <div class="baogao-left">
+                        <span>● iAra</span>
+                    </div>
+                    <div class="baogao-right">
+                        <span>3</span>
+                        <span>3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="img-thumbnail">
+                    <img src="img/re3.jpg" alt="...">
+                    <div>
+                        <h5>声音不是最优秀，但它形音完美的结合，足够打动人心</h5>
+                    </div>
+                    <div class="baogao-left">
+                        <span>● iAra</span>
+                    </div>
+                    <div class="baogao-right">
+                        <span>3</span>
+                        <span>3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="img-thumbnail">
+                    <img src="img/re3.jpg" alt="...">
+                    <div>
+                        <h5>声音不是最优秀，但它形音完美的结合，足够打动人心</h5>
+                    </div>
+                    <div class="baogao-left">
+                        <span>● iAra</span>
+                    </div>
+                    <div class="baogao-right">
+                        <span>3</span>
+                        <span>3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导购精选-->
+<div class="container">
+    <div class="baogao">
+        <h3>导购精选</h3>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="img-thumbnail">
+                    <img src="img/re1.jpg" alt="...">
+                    <div>
+                        <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                    </div>
+                    <div class="baogao-right">
+                        <span>3</span>
+                        <span>3</span>
+                    </div>
+                </div>
+                <div class="baogao-bottom-img"></div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="img-thumbnail">
+                    <img src="img/re1.jpg" alt="...">
+                    <div>
+                        <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                    </div>
+                    <div class="baogao-right">
+                        <span>3</span>
+                        <span>3</span>
+                    </div>
+                </div>
+                <div class="baogao-bottom-img"></div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="img-thumbnail">
+                    <img src="img/re1.jpg" alt="...">
+                    <div>
+                        <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                    </div>
+                    <div class="baogao-right">
+                        <span>3</span>
+                        <span>3</span>
+                    </div>
+                </div>
+                <div class="baogao-bottom-img"></div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="img-thumbnail">
+                    <img src="img/re1.jpg" alt="...">
+                    <div>
+                        <h5>空气净化器里面学问多得惊呆你，你选对了吗？</h5>
+                    </div>
+                    <div class="baogao-right">
+                        <span>3</span>
+                        <span>3</span>
+                    </div>
+                </div>
+                <div class="baogao-bottom-img"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--发现酷玩-->
+<div class="container-fluid bg-cc">
+    <div class="baogao container kuwan">
+        <h3>发现酷玩</h3>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/re2.jpg" alt="...">
+                        <div>
+                            <h5>SCiO 微型光谱仪</h5>
+                            <p class="h6">可以测定食物成分及营养</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 1212</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/re2.jpg" alt="...">
+                        <div>
+                            <h5>SCiO 微型光谱仪</h5>
+                            <p class="h6">可以测定食物成分及营养</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 1212</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/re2.jpg" alt="...">
+                        <div>
+                            <h5>SCiO 微型光谱仪</h5>
+                            <p class="h6">可以测定食物成分及营养</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 1212</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/re2.jpg" alt="...">
+                        <div>
+                            <h5>SCiO 微型光谱仪</h5>
+                            <p class="h6">可以测定食物成分及营养</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 1212</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/re2.jpg" alt="...">
+                        <div>
+                            <h5>SCiO 微型光谱仪</h5>
+                            <p class="h6">可以测定食物成分及营养</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 1212</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/re2.jpg" alt="...">
+                        <div>
+                            <h5>SCiO 微型光谱仪</h5>
+                            <p class="h6">可以测定食物成分及营养</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 1212</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/re2.jpg" alt="...">
+                        <div>
+                            <h5>SCiO 微型光谱仪</h5>
+                            <p class="h6">可以测定食物成分及营养</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 1212</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/re2.jpg" alt="...">
+                        <div>
+                            <h5>SCiO 微型光谱仪</h5>
+                            <p class="h6">可以测定食物成分及营养</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 1212</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/k3.jpg" alt="...">
+                        <div>
+                            <h5>Mozbii 触控吸色笔</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 暂无</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/k3.jpg" alt="...">
+                        <div>
+                            <h5>Mozbii 触控吸色笔</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 暂无</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/k3.jpg" alt="...">
+                        <div>
+                            <h5>Mozbii 触控吸色笔</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 暂无</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/k3.jpg" alt="...">
+                        <div>
+                            <h5>Mozbii 触控吸色笔</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 暂无</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/k3.jpg" alt="...">
+                        <div>
+                            <h5>Mozbii 触控吸色笔</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 暂无</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/k3.jpg" alt="...">
+                        <div>
+                            <h5>Mozbii 触控吸色笔</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 暂无</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/k3.jpg" alt="...">
+                        <div>
+                            <h5>Mozbii 触控吸色笔</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 暂无</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/k3.jpg" alt="...">
+                        <div>
+                            <h5>Mozbii 触控吸色笔</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥ 暂无</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan01.jpg" alt="...">
+                        <div>
+                            <h5>索尼 FDR-AXP55 摄像机</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥497</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan01.jpg" alt="...">
+                        <div>
+                            <h5>索尼 FDR-AXP55 摄像机</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥497</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan01.jpg" alt="...">
+                        <div>
+                            <h5>索尼 FDR-AXP55 摄像机</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥497</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan01.jpg" alt="...">
+                        <div>
+                            <h5>索尼 FDR-AXP55 摄像机</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥497</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan01.jpg" alt="...">
+                        <div>
+                            <h5>索尼 FDR-AXP55 摄像机</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥497</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan01.jpg" alt="...">
+                        <div>
+                            <h5>索尼 FDR-AXP55 摄像机</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥497</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan01.jpg" alt="...">
+                        <div>
+                            <h5>索尼 FDR-AXP55 摄像机</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥497</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan01.jpg" alt="...">
+                        <div>
+                            <h5>索尼 FDR-AXP55 摄像机</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥497</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <!--2-->
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan02.jpg" alt="...">
+                        <div>
+                            <h5>三星 HW-K950 家庭影院</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥1246</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan02.jpg" alt="...">
+                        <div>
+                            <h5>三星 HW-K950 家庭影院</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥1246</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan02.jpg" alt="...">
+                        <div>
+                            <h5>三星 HW-K950 家庭影院</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥1246</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan02.jpg" alt="...">
+                        <div>
+                            <h5>三星 HW-K950 家庭影院</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥1246</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan02.jpg" alt="...">
+                        <div>
+                            <h5>三星 HW-K950 家庭影院</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥1246</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan02.jpg" alt="...">
+                        <div>
+                            <h5>三星 HW-K950 家庭影院</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥1246</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan02.jpg" alt="...">
+                        <div>
+                            <h5>三星 HW-K950 家庭影院</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥1246</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan02.jpg" alt="...">
+                        <div>
+                            <h5>三星 HW-K950 家庭影院</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥1246</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <!--3-->
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan03.jpg" alt="...">
+                        <div>
+                            <h5>FOSSIL Q45 Pilot 智能手表 </h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥36000</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan03.jpg" alt="...">
+                        <div>
+                            <h5>FOSSIL Q45 Pilot 智能手表 </h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥36000</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan03.jpg" alt="...">
+                        <div>
+                            <h5>FOSSIL Q45 Pilot 智能手表 </h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥36000</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan03.jpg" alt="...">
+                        <div>
+                            <h5>FOSSIL Q45 Pilot 智能手表 </h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥36000</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan03.jpg" alt="...">
+                        <div>
+                            <h5>FOSSIL Q45 Pilot 智能手表 </h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥36000</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan03.jpg" alt="...">
+                        <div>
+                            <h5>FOSSIL Q45 Pilot 智能手表 </h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥36000</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan03.jpg" alt="...">
+                        <div>
+                            <h5>FOSSIL Q45 Pilot 智能手表 </h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥36000</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan03.jpg" alt="...">
+                        <div>
+                            <h5>FOSSIL Q45 Pilot 智能手表 </h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥36000</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <!--4-->
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan04.jpg" alt="...">
+                        <div>
+                            <h5>轻客 TF01 电单车:可折叠 智能变速</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥13201</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan04.jpg" alt="...">
+                        <div>
+                            <h5>轻客 TF01 电单车:可折叠 智能变速</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥13201</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan04.jpg" alt="...">
+                        <div>
+                            <h5>轻客 TF01 电单车:可折叠 智能变速</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥13201</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan04.jpg" alt="...">
+                        <div>
+                            <h5>轻客 TF01 电单车:可折叠 智能变速</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥13201</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan04.jpg" alt="...">
+                        <div>
+                            <h5>轻客 TF01 电单车:可折叠 智能变速</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥13201</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan04.jpg" alt="...">
+                        <div>
+                            <h5>轻客 TF01 电单车:可折叠 智能变速</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥13201</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan04.jpg" alt="...">
+                        <div>
+                            <h5>轻客 TF01 电单车:可折叠 智能变速</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥13201</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="shiyong.html">
+                    <div class="img-thumbnail">
+                        <img src="img/kuwan04.jpg" alt="...">
+                        <div>
+                            <h5>轻客 TF01 电单车:可折叠 智能变速</h5>
+                            <p class="h6">能吸取65000种颜色</p>
+                        </div>
+                        <div class="baogao-left">
+                            <span class="red">￥13201</span>
+                        </div>
+                        <div class="baogao-right">
+                            <span>3</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <!--点我-->
+    <div class="dianwo text-center"><span>点击加载更多</span></div>
+</div>
+<!--底部-->
+<div class="container-fluid footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="img/code.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="img/logoImg.jpg" alt="">
+                <p>全球酷玩试用导购平台</p>
+                <p>酷·新奇·好玩·品质</p>
+                <p>微信添加“JguoJguo” </p>
+                <p>获取我们的服务。</p>
+            </div>
+            <div class="col-md-2">
+                <h4>免费试用</h4>
+                <p><a href="#">试用流程</a></p>
+                <p> <a href="#">如何提高成功率</a></p>
+            </div>
+            <div class="col-md-2">
+                <h4>友情链接</h4>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">智东西</a></div>
+                    <div class="col-md-6"><a href="#">WEIBUSI</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">搜狐IT</a></div>
+                    <div class="col-md-6"><a href="#">腾讯科技</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">搜狐数码</a></div>
+                    <div class="col-md-6"><a href="#">凤凰科技</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">泡泡网</a></div>
+                    <div class="col-md-6"><a href="#">3W咖啡</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">ZUK社区</a></div>
+                    <div class="col-md-6"><a href="#">亿觅emie</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">极客公园</a></div>
+                    <div class="col-md-6"><a href="#">易迅易启玩</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">果库</a></div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <h4>购买攻略</h4>
+                <p><a href="#">美亚海淘教程</a></p>
+                <p><a href="#">日亚海淘教程</a></p>
+                <p><a href="#">海淘转运攻略</a></p>
+                <p><a href="#">kickstarter 众筹购买攻略</a></p>
+                <p><a href="#">indiegogo 众筹购买攻略</a></p>
+            </div>
+            <div class="col-md-2">
+                <h4>厂商合作</h4>
+                <p><a href="guayu.html">关于极果</a></p>
+                <p><a href="#">联系我们</a></p>
+                <p><a href="#">商务合作：BD@jiguo.com</a></p>
+                <p><a href="#">CEO邮箱：CEO@jiguo.com</a></p>
+            </div>
+        </div>
+        <p class="text-center">© 2016 极果版权所有</p>
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+
+    $(function () {
+        // 导航栏循环添加
+        var str = '<h3>热门试用</h3>';
+        $(function () {
+            var $lunboData = [{
+                name: '巴慕达 The Toaster 烤面包机',
+                numberOneClass:'content-scroll-red',
+                numberOne: '2032',
+                numberTwo:'20台',
+                shenQingNumber:'1392',
+                leiXing:'首发',
+                leiXingClass:'shoufa',
+                text: '剩余时间2天',
+                textClass: 'red',
+                img:'img/hot1.jpg'
+            },{
+                name: 'Osprey小鹰户外运动专业腰包',
+                numberOneClass:'content-scroll-gree',
+                numberOne: '2032',
+                numberTwo:'20台',
+                shenQingNumber:'1392',
+                leiXing:'体验师专享',
+                leiXingClass:'zhuanxiang',
+                text: '查看试用名单',
+                textClass: 'gree',
+                img:'img/hot2.jpg'
+            },
+                {
+                    name: 'Liquid Image 338 运动摄像眼镜',
+                    numberOneClass:'content-scroll-red',
+                    numberOne: '2032',
+                    numberTwo:'20台',
+                    shenQingNumber:'1392',
+                    leiXing:'首发',
+                    leiXingClass:'shoufa',
+                    text: '剩余时间2天',
+                    textClass: 'red',
+                    img:'img/hot3.jpg'
+
+                },{
+                    name: '巴慕达 The Toaster 烤面包机',
+                    numberOneClass:'content-scroll-red',
+                    numberOne: '2032',
+                    numberTwo:'20台',
+                    shenQingNumber:'1392',
+                    leiXing:'首发',
+                    leiXingClass:'shoufa',
+                    text: '剩余时间2天',
+                    textClass: 'red',
+                    img:'img/hot4.jpg'
+
+                },
+                {
+                    name: '巴慕达 The Toaster 烤面包机',
+                    numberOneClass:'content-scroll-red',
+                    numberOne: '2032',
+                    numberTwo:'20台',
+                    shenQingNumber:'1392',
+                    leiXing:'首发',
+                    leiXingClass:'shoufa',
+                    text: '剩余时间2天',
+                    textClass: 'red',
+                    img:'img/hot5.jpg'
+
+                },{
+                    name: 'Osprey小鹰户外运动专业腰包',
+                    numberOneClass:'content-scroll-gree',
+                    numberOne: '2032',
+                    numberTwo:'20台',
+                    shenQingNumber:'1392',
+                    leiXing:'体验师专享',
+                    leiXingClass:'zhuanxiang',
+                    text: '查看试用名单',
+                    textClass: 'gree',
+                    img:'img/hot6.jpg'
+
+                },
+                {
+                    name: 'Liquid Image 338 运动摄像眼镜',
+                    numberOneClass:'content-scroll-red',
+                    numberOne: '2032',
+                    numberTwo:'20台',
+                    shenQingNumber:'1392',
+                    leiXing:'首发',
+                    leiXingClass:'shoufa',
+                    text: '剩余时间2天',
+                    textClass: 'red',
+                    img:'img/hot7.jpg'
+
+                },{
+                    name: '巴慕达 The Toaster 烤面包机',
+                    numberOneClass:'content-scroll-red',
+                    numberOne: '2032',
+                    numberTwo:'20台',
+                    shenQingNumber:'1392',
+                    leiXing:'首发',
+                    leiXingClass:'shoufa',
+                    text: '剩余时间2天',
+                    textClass: 'red',
+                    img:'img/hot8.jpg'
+
+                },
+                {
+                    name: '巴慕达 The Toaster 烤面包机',
+                    numberOneClass:'content-scroll-red',
+                    numberOne: '2032',
+                    numberTwo:'20台',
+                    shenQingNumber:'1392',
+                    leiXing:'首发',
+                    leiXingClass:'shoufa',
+                    text: '剩余时间2天',
+                    textClass: 'red',
+                    img:'img/hot9.jpg'
+
+                },{
+                    name: 'Osprey小鹰户外运动专业腰包',
+                    numberOneClass:'content-scroll-gree',
+                    numberOne: '2032',
+                    numberTwo:'20台',
+                    shenQingNumber:'1392',
+                    leiXing:'体验师专享',
+                    leiXingClass:'zhuanxiang',
+                    text: '查看试用名单',
+                    textClass: 'gree',
+                    img:'img/hot10.jpg'
+
+                },
+                {
+                    name: 'Liquid Image 338 运动摄像眼镜',
+                    numberOneClass:'content-scroll-red',
+                    numberOne: '2032',
+                    numberTwo:'20台',
+                    shenQingNumber:'1392',
+                    leiXing:'首发',
+                    leiXingClass:'shoufa',
+                    text: '剩余时间2天',
+                    textClass: 'red',
+                    img:'img/hot11.jpg'
+
+                },{
+                    name: '巴慕达 The Toaster 烤面包机',
+                    numberOneClass:'content-scroll-red',
+                    numberOne: '2032',
+                    numberTwo:'20台',
+                    shenQingNumber:'1392',
+                    leiXing:'首发',
+                    leiXingClass:'shoufa',
+                    text: '剩余时间2天',
+                    textClass: 'red',
+                    img:'img/hot12.jpg'
+                }];
+
+
+            for(var j = 0; j < 3; j++){
+                str += '<div class="row content-scroll text-center">';
+                for(var i = j * 3; i < j * 3 + 4; i++){
+                    str += '<div class="col-md-3 col-sm-3 col-xs-3">';
+                    str += '<div>';
+                    str += '<img src="'+ $lunboData[i].img +'" alt="..." >';
+                    str += '<div>';
+                    str += '<h4 class="text-weight-six">'+ $lunboData[i].name +'</h4>';
+                    str += '<p class="'+ $lunboData[i].numberOneClass +'">';
+                    str += '<span class="">2032</span>';
+                    str += '<span class="">20台</span>';
+                    str += '</p>';
+                    str += '<h4><span class="'+ $lunboData[i].textClass +' text-weight-five">1392</span>申请</h4>';
+                    str += '<a href="#" class="'+ $lunboData[i].textClass +'">'+ $lunboData[i].text +'</a>';
+                    str += '</div>';
+                    str += '</div>';
+                    str += '<span class="'+ $lunboData[i].leiXingClass +'">'+ $lunboData[i].leiXing +'</span>';
+                    str += '</div>';
+                }
+                str += '</div>';
+            }
+            $('.lunbo').html(str);
+        });
+        // 轮播图事件
+        $(function () {
+            var $lunboImg = $('.content-scroll');
+            var $index = 0;
+            var $int = null;
+            $lunboImg.eq(0).siblings().css({left : '100%'});
+            function $lunbomove() {
+                var $index1 = $index -1;
+                $index = $index > $lunboImg.length - 1 ? 0 : $index;
+                $index = $index < 0 ? $lunboImg.length - 1 : $index;
+                $index1 = $index1 > $lunboImg.length - 1 ? 0 : $index1;
+                $index1 = $index1 < 0 ? $lunboImg.length - 1 : $index1;
+                $lunboImg.eq($index1).siblings().css({left : '100%'});
+                $lunboImg.eq($index).stop().animate({left : 0},1000);
+                $lunboImg.eq($index1).stop().animate({left : '-100%'},1000);
+            }
+            $int = setInterval(function () {
+                $index++;
+                $lunbomove();
+            },2000);
+            $lunboImg.hover(function () {
+                clearInterval($int)
+            },function () {
+                $int = setInterval(function () {
+                    $index++;
+                    $lunbomove();
+                },2000);
+            })
+
+
+
+        });
+        // 点我事件
+        $(function () {
+            var $index1 = 0;
+            var $kuwanDiv = $('.kuwan>div');
+            var $dianwoSpan = $('.dianwo>span');
+            $kuwanDiv.eq(3).nextAll().hide();
+            $dianwoSpan.click(function () {
+                $index1++;
+                $kuwanDiv.eq($index1 * 2 + 3).prevAll().show();
+                $kuwanDiv.eq($index1 * 2 + 3).show();
+                if($index1 === 4){
+                    $dianwoSpan.html('没有更多啦~')
+                }
+            })
+        });
+     
+        $('.banner-one-text').stop().animate({top:20,right: 300},800);
+
+        // 倒计时
+        $(function () {
+            var shengri = 1532534400000;
+            function jia(a) {
+                return a = a < 10? '0'+a:a
+            }
+            var a = document.getElementById('daoji');
+            setInterval(function () {
+                var date = new Date;
+                var daojisi = shengri - date.getTime();
+                var tian = parseInt(daojisi/1000/60/60/24 );
+                var xiaosi = parseInt(daojisi/1000/60/60%24);
+                var fen = parseInt(daojisi/1000/60%60);
+                var miao = parseInt(daojisi/1000%60);
+                a.innerHTML = ('<h4 >距离申名扬生日还有&nbsp&nbsp:&nbsp&nbsp'+tian+'天'+jia(xiaosi)+':'+jia(fen)+':'+jia(miao)+'</h4>');
+            })
+        });
+
+
+
+
+    })
+
+</script>
+</html>

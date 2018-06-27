@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        /*导航栏*/
+        .nav{
+            height: 50px;
+            border-bottom: 1px solid #cecfcf;
+            background-color: #fff;
+        }
+        .navbar{
+            border: 0;
+        }
+        .nav-logo{
+            height: 50px;
+        }
+        .banner-one{
+            width: 100%;
+            height: 300px;
+            background: url("../img/original.jpg") no-repeat center center;
+            position: relative;
+        }
+        .banner-one-text{
+            width: 300px;
+            height: 250px;
+            position: absolute;
+            top: 20px;
+            right: 300px;
+        }
+        .banner-one-text>h2,
+        .banner-one-text>p{
+            color: #fff;
+            margin: 20px 0;
+            float: right;
+        }
+        .banner-one-text>p>span{
+            padding: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,.3);
+        }
+        .banner-one-text>button{
+            width: 240px;
+            height: 48px;
+            float: right;
+            font-size: 24px;
+        }
+        /*导航栏结束*/
+
+        /*底部样式*/
+        .footer{
+            background-color: #505050;
+            color: #a3a3a3;
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+        .footer a{
+            color: #a3a3a3;
+            font-size: 12px;
+        }
+        .footer>div>p{
+            margin-top: 80px;
+        }
+        .dianwo{
+            margin: 20px 0 50px 0;
+        }
+        .dianwo>span{
+            background: url(../img/more.png) no-repeat left center;
+            padding-left: 20px;
+            font-size: 16px;
+            color: #fe5341;
+            cursor: pointer;
+        }
+        .footer h4{
+            color: #fff;
+        }
+
+        /*内容*/
+        .guanyu a{
+            color: #000;
+        }
+        .guanyu h3{
+            font-weight: 900;
+        }
+        .guanyu h4{
+            font-weight: 600;
+        }
+        .guanyu-left,.guanyu-right{
+            background-color: #f3f3f3;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 50px 0;
+        }
+        .guanyu h3{
+            padding-bottom: 8px;
+        }
+        .guanyu-left a{
+            margin-left: 20px;
+        }
+        .guanyu-left>p{
+            margin-left: 15px;
+        }
+        .guanyu h3{
+            border-bottom:1px solid #ccc;
+        }
+        .guanyu-right{
+            margin-left: 40px;
+            padding: 20px 30px;
+        }
+        .guanyu-right>h4{
+            margin: 30px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--导航栏-->
+<div class="container-fluid nav">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid nav">
+                <div class="navbar-header">
+                    <img src="img/logonew.png" alt="" class="nav-logo">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="酷玩/酷玩-最新.html">酷玩</a></li>
+                        <li><a href="导购-最新.html">导购</a></li>
+                        <li><a href="大众使用/大众使用-全部.html">试用</a></li>
+                        <li><a href="报告/报告-最新.html">报告</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="">登录</a></li>
+                        <li><a href="">|</a></li>
+                        <li><a href="../zhuche.html">注册</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!--内容-->
+<div class="container">
+    <div class="row guanyu">
+        <div class="col-md-3 guanyu-left">
+            <h3><a href="">帮助中心</a></h3>
+            <h4><a href="">商务合作</a></h4>
+            <p><a href="">关于极果</a></p>
+            <p><a href="">极果大事记</a></p>
+            <p><a href="">联系我们</a></p>
+            <h4><a href="">免费试用</a></h4>
+            <p><a href="">试用流程</a></p>
+            <p><a href="">如何提高成功率</a></p>
+        </div>
+        <div class="col-md-8 guanyu-right">
+            <h3>免费试用</h3>
+            <h4>试用流程</h4>
+            <ul class="list-unstyled">
+                <li><p>Step1：报名申请试用</p></li>
+                <li><p>Step2：筛选并公布试用名单</p></li>
+                <li><p>Step3：客服电话或短信通知试用者</p></li>
+                <li><p>Step4：收取押金后寄送产品和试用须知</p></li>
+                <li><p>Step5：用户收货并在朋友圈或微博晒单</p></li>
+                <li><p>Step6：试用并在规定时间上传体验报告</p></li>
+                <li><p>Step7：审核报告并确认产品是否回收</p></li>
+                <li><p>Step8：返还试用机，收货后退还押金</p></li>
+            </ul>
+            <h4>试用注意事项</h4>
+            <ol class="list-unstyled">
+                <li><p>1. 收到试用通知，2天不回复算弃权</p></li>
+                <li><p>2. 拒缴押金则取消试用资格</p></li>
+                <li><p>3. 试用机被人为损坏须赔偿 Beijing Mini Maker Faire，让更多的普通消费者通过丰富的线下活动来亲身体验新硬件给生活带来的全新改变；</p></li>
+                <li><p>4. 严重拖延报告将影响后续活动资格</p></li>
+                <li><p>5. 30天内不得凭借拉票重复中签试用，以当月首次为准，不得调换，遇有重复则资格顺延。</p></li>
+                <li><p>6. 客服妹妹QQ： 3287633427</p></li>
+            </ol>
+            <h4>如何提高申请成功率</h4>
+            <ol class="list-unstyled">
+                <li><p>1. 完善个人主页，展现专业性（请在手机端页面完善：m.jiguo.com）</p></li>
+                <li><p>2. 试用计划明确且有新意</p></li>
+                <li><p>3. 在社交网络或圈子里有大影响力</p></li>
+                <li><p>4. 使劲拉票，但禁止恶意刷票</p></li>
+                <li><p>5. 认真参与并转发极果的活动</p></li>
+                <li><p>BTW：极果不是福利社，给基友、男友、女友送礼物，献爱心以及完成小时候心愿神马的一概不会通过哦～</p></li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!--底部-->
+<div class="container-fluid footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="img/code.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="img/logoImg.jpg" alt="">
+                <p>全球酷玩试用导购平台</p>
+                <p>酷·新奇·好玩·品质</p>
+                <p>微信添加“JguoJguo” </p>
+                <p>获取我们的服务。</p>
+            </div>
+            <div class="col-md-2">
+                <h4>免费试用</h4>
+                <p><a href="#">试用流程</a></p>
+                <p><a href="#">如何提高成功率</a></p>
+            </div>
+            <div class="col-md-2">
+                <h4>友情链接</h4>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">智东西</a></div>
+                    <div class="col-md-6"><a href="#">WEIBUSI</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">搜狐IT</a></div>
+                    <div class="col-md-6"><a href="#">腾讯科技</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">搜狐数码</a></div>
+                    <div class="col-md-6"><a href="#">凤凰科技</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">泡泡网</a></div>
+                    <div class="col-md-6"><a href="#">3W咖啡</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">ZUK社区</a></div>
+                    <div class="col-md-6"><a href="#">亿觅emie</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">极客公园</a></div>
+                    <div class="col-md-6"><a href="#">易迅易启玩</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a href="#">果库</a></div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <h4>购买攻略</h4>
+                <p><a href="#">美亚海淘教程</a></p>
+                <p><a href="#">日亚海淘教程</a></p>
+                <p><a href="#">海淘转运攻略</a></p>
+                <p><a href="#">kickstarter 众筹购买攻略</a></p>
+                <p><a href="#">indiegogo 众筹购买攻略</a></p>
+            </div>
+            <div class="col-md-2">
+                <h4>厂商合作</h4>
+                <p><a href="#">关于极果</a></p>
+                <p><a href="#">联系我们</a></p>
+                <p><a href="#">商务合作：BD@jiguo.com</a></p>
+                <p><a href="#">CEO邮箱：CEO@jiguo.com</a></p>
+            </div>
+        </div>
+        <p class="text-center">© 2016 极果版权所有</p>
+    </div>
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+
+</script>
+</html>
